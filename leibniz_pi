@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <stdbool.h>
+
+double leibniz_pi(int iterations){
+    int i = 1;
+    double pi = 0.0;
+    bool toggle = true;
+    for (int count = 0 ; count<iterations; count++){
+        double num = 4.0/i;
+        if (toggle){
+        pi = pi + num;
+        toggle = !toggle;
+        } else {
+        pi = pi - num; 
+        toggle = !toggle;
+        }
+        i=i+2;
+    }
+    printf("%lf", pi);
+}
+
+int main()
+{
+  
+   leibniz_pi(100);       // 3.131593
+
+    return 0;
+}
