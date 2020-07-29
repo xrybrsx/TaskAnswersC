@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <ctype.h>
+
+ void pandemic_simulation(unsigned int initial_infected, float growth_per_iteration, float decay_per_iteration){
+     
+     int i = 0;
+     
+     for (growth_per_iteration; growth_per_iteration > 0; growth_per_iteration = growth_per_iteration - decay_per_iteration){
+         
+         printf("Iteration %d: %d (%f)\n", i, initial_infected,  growth_per_iteration);
+          initial_infected =  initial_infected +  initial_infected*growth_per_iteration;
+         i++;
+     }
+     
+ }
+ 
+int main()
+{
+pandemic_simulation(100, 0.5, 0.1);
+return 0;
+}
