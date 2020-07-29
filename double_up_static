@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int num = 1;
+int static staticNum = 1;
+
+int double_up(){
+    num = num*2;
+}
+int double_up_static(){
+    staticNum = staticNum*2;
+}
+
+int main()
+{
+    printf("%d\n", double_up() == double_up_static());  // 1
+printf("%d\n", double_up() == double_up_static());  // 1
+printf("%d\n", double_up() == double_up_static());  // 1
+
+for(int i = 0; i < 9; i++) {
+    double_up(); // no output expected
+    double_up_static(); // no output expected aswell
+}
+
+printf("%d\n", double_up() == double_up_static());  // 1
+return 0;
+}
