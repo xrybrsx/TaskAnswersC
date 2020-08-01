@@ -1,0 +1,29 @@
+#include <math.h>
+#include <stdio.h>
+
+int at(int array[], int a_size, int i){
+    while(i<0){
+        i=i+a_size;
+    }
+ while(i>=a_size){
+        i=i-a_size;
+    }
+    return array[i];
+}
+        
+ 
+ main()
+{
+ int array[] = {10, 20, 30, 40};
+int a_size = sizeof(array)/sizeof(array[0]);
+
+printf("%d\n", at(array, a_size, 0)); // 10
+printf("%d\n", at(array, a_size, 1)); // 20
+printf("%d\n", at(array, a_size, -1)); // 40
+printf("%d\n", at(array, a_size, -2)); // 30
+printf("%d\n", at(array, a_size, 4)); // 10
+printf("%d\n", at(array, a_size, 5)); // 20
+printf("%d\n", at(array, a_size, -5)); // 40
+printf("%d\n", at(array, a_size, -6)); // 30
+    return 0;
+}
