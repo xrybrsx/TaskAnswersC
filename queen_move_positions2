@@ -1,0 +1,51 @@
+#include <math.h>
+#include <stdio.h>
+
+void queen_move_positions(char letter, int pos){
+    int i=1;
+    while(i<9){
+        if(i!=pos){
+        printf("%c%d ", letter ,i);
+        }
+        i++;
+        
+    }
+    for(int i=97; i<105; i++ ){
+        if(i!=letter){
+        printf("%c%d// ", i, pos);
+    }
+    } 
+    char let=letter;
+    for(int i=pos-1; i>0; i--){
+       if(let>97){
+        let--;
+        printf("%c%d ", let, i);
+       }
+    }
+    
+   char let2=letter;
+    for(int i=pos+1; i<9; i++){
+       if(let2<105){
+        let2++;
+        printf("%c%d ", let2, i);}
+    }
+}
+        
+int from_vertical(char letter2){
+    int num=letter2-96;
+    return num;
+    
+}
+char to_vertical(int num2){
+    char letter3=num2+96;
+    return letter3;
+}
+
+int main()
+{
+    
+    queen_move_positions('c', 5);
+ 
+
+    return 0;
+}
