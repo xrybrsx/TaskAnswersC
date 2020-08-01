@@ -1,0 +1,59 @@
+#include <stdio.h>
+
+int from_vertical(char letter){
+    if (letter >= 97 && letter <= 104){
+        return letter - 96;
+    }else return 0;
+}
+
+char to_vertical(int pos){
+    if (pos >= 1 && pos <= 8){
+        return pos + 96;
+    }else return 0;
+}
+
+void queen_move_positions(char letter, int pos){
+    for (int i = 8; i > 0; i-- ){
+        if (i!=pos){
+        printf("%c%d ", letter, i);
+        }
+        
+    }
+    for (int i = 8; i > 0; i-- ){
+        if (to_vertical(i)!=letter){
+        printf("%c%d ", to_vertical(i), pos);
+        }
+    }
+        char rightDown = letter+1;
+        for (int i = pos-1; i > 0; i-- ){
+            printf("%c%d ", rightDown, i);
+            rightDown++;
+        }
+        char leftUp = letter-1;
+         for (int i = pos+1; i < 9; i++ ){
+             if(leftUp>='a'){
+            printf("%c%d ", leftUp, i);
+            leftUp--;
+        }
+         }
+        char rightUp = letter+1;
+        for (int i = pos+1; i < 9; i++ ){
+            if(rightUp<='f'){
+            printf("%c%d ", rightUp, i);
+            rightUp++;
+        }
+        }
+        char leftDown = letter-1;
+         for (int i = pos-1; i > 0; i-- ){
+            printf("%c%d ", leftDown, i);
+            leftDown--;
+        }
+}
+
+int main()
+{
+    
+  queen_move_positions('g', 2);
+
+    return 0;
+}
