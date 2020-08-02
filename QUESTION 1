@@ -1,0 +1,19 @@
+QUESTION 1 (35 points)
+In this question you are asked to write a C function CACHE of this form:
+
+	int CACHE(double *prod , double *sum, double d1, double d2).
+The function must have the following properties:
+The function takes as arguments two doubles, d1 and d2 and the pointers prod, sum.
+The function computes the nearest integer not greater than d1 and the nearest integer not greater than d2 and stores the product of these integers in prod and their sum in sum.
+The function returns 1 if d1 and d2 have the same sign and returns -1 if their sign is different. Recall that 0 has no sign, so, design your function by treating 0 as a number with a sign different from both a positive and a negative number.
+As an example, take
+	d1 = 0, d2 = -5.89.
+The nearest integer not greater than d1 is 0. The nearest integer not greater than d2 is -6. The function stores their product 0 in prod, and stores their sum -6 in sum. Since d1 and d2 have different sign, the function returns -1.
+
+You might find it useful to have a look at the C math functions.
+
+Save your solution in a file named q1.c. Your code must:
+Include all the header files required for the compiler to run your function.
+Contain the declaration and definition of the function CACHE.
+Contain any additional type definition or function definition required for the compiler to run CACHE. For instance, if, in addition to CACHE you create another function that you use within it, you must include the definition (and declaration) of this function in your code, otherwise CACHE would not work without it. This, of course, is required only for functions you create, and not for already existing C math functions, such as these, which are already predefined and work as long as you include the appropriate header in your code.
+
