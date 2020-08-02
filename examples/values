@@ -1,0 +1,17 @@
+#include <stdio.h>
+int main()
+{
+// Declare variables
+char c;
+short int i;
+long x;
+float f;
+double d;
+// Print values of variables without initializing them
+printf("char variable c = %c\n",c);
+printf("int variable i = %d\n",i);
+printf("long variable x = %l\n",x);
+printf("float variable f = %f\n",f);
+printf("double variable d = %f\n",d);
+return(0);
+}
