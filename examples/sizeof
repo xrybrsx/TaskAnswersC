@@ -1,0 +1,21 @@
+#include <stdio.h>
+int main()
+{
+char c;
+short int i;
+long x;
+float f;
+double d;
+int array1[10];
+char array2[15];
+printf("Variable sizes:\n");
+// Obtain and print size of variables with sizeof()
+printf("Size of char variable c = %d\n",sizeof(c));
+printf("Size of short int variable i = %d\n",sizeof(i));
+printf("Size of long variable x = %d\n",sizeof(x));
+printf("Size of float variable f = %d\n",sizeof(f));
+printf("Size of double variable d = %d\n",sizeof(d));
+printf("Size of integer array array1 = %d\n",sizeof(array1));
+printf("Size of character array array2 = %d\n",sizeof(array2));
+return(0);
+}
