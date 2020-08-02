@@ -1,0 +1,7 @@
+Let’s examine a program that computes any triangular number up to
+100.
+I A triangular number counts objects arranged in an equilateral triangle.
+I The n-th triangular number is the number of dots in the triangular
+arrangement with n dots on a side.
+I The n-th triangular number is the sum of the natural numbers from 1 to
+n.
