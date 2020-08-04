@@ -1,0 +1,11 @@
+Part 1 - Loops
+
+Create a Main class
+In the Main class create a main method which:
+Prints a times table
+The user will specify the multiplication table to calculate, which you should obtain from the command line using Toolbox. You must instanitate Toolbox from the main method.
+Use a traditional for loop to output a multiplication table up to 20 times the number specified by the user.
+For example if the user specifies 2, you would output 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40 (you may choose how to lay this out)
+Calculate how many successive integers to add to make a total over 500
+Use a while loop to sum consecutive integers starting from 1 (eg. 1+2+3...), until the sum of those integers is greater than 500.
+Your code should print how many iterations were required to do this.
