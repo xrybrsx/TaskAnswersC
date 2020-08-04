@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+int swap(int *a, int *b) {
+    int t = *a;
+    *a = *b;
+    *b = t;
+    return 0;
+}
+void swap2(int a[]){
+    int size;
+   size = 4;
+   int *p;
+   p = &a[0];
+   int *b;
+   b = &a[size];
+   
+    for(int i=0;i<size/2; i++ ){
+        swap( p, b);
+       b--;
+       p++;
+    }
+    for(int loop = 0; loop < 5; loop++){
+      printf("%d ", a[loop]);
+    }
+}
+
+int main()
+{
+    int a[]={10,20,30,40,50};
+    swap2(a);
+}
