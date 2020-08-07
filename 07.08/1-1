@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+float function(int num){
+  float sum = 0;
+  int counter  = 0;
+  while(num >= 1 || num <= -1){
+      int digit = num%10;
+      num = num/10;
+      sum += digit;
+      counter ++;
+  }
+  float average = sum/counter;
+  printf("%f", average);
+  return average;
+}
+
+int main()
+{
+    function(-1203);
+  
+    
+
+    return 0;
+}
