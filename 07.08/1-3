@@ -1,0 +1,46 @@
+
+#include <stdio.h>
+
+int F13(int one, int two){
+    if (one>0 && two == 0){
+        return 0;
+        
+    } else return 1;
+}
+
+int L = 1;
+int func(int a, int b, int c){
+    
+    int step1and2;
+    if (F13(b,c) == 1){
+     step1and2 = 0;
+    }else step1and2 = 1;
+    
+    int step3 = F13(a,step1and2);
+    
+    int final;
+     if (step3 != 0 && L != 0){
+         final = 1;
+     }else {
+         final = 0;
+     }
+     L = final;
+     
+    printf("%d\n", final);
+    return final;
+    
+}
+
+
+int main()
+{
+  func(0, 2, 0);   //  -> 1
+func(0, 5, 8) ;   // -> 1
+func(0, 0, 0) ;   // -> 1
+func(1, 0, 0) ;   // -> 0
+func(0, 4, 7) ;   // -> 0
+  
+    
+
+    return 0;
+}
