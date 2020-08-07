@@ -1,0 +1,36 @@
+
+#include <stdio.h>
+
+int square(int side){
+    for (int i = 0; i < side; i++) {
+       printf("-");
+    }
+    printf("\n");
+    int counter = 1;
+    for (int i = 0; i < side -  2; i++) {
+        printf("|");
+        for (int i = 1; i <= side -  2; i++) {
+            if (counter == i){
+                printf("*");
+            }else
+           printf(" ");
+        }
+         printf("|\n");
+         counter++;
+        
+    }
+    for (int i = 0; i < side; i++) {
+       printf("-");
+    }
+    int symbols = side*2 + (side-2)*3; 
+    return symbols;
+} 
+
+int main()
+{
+   square(5);
+  
+    
+
+    return 0;
+}
