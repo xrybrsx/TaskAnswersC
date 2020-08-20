@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+void guessingGame(){
+    printf("Hi! Guess my secret number!\n Ready, steady, GO!\n");
+    int number = rand()%101;
+    int guess;
+    int count = 0;
+    scanf("%d", &guess);
+    count++;
+    while (guess != number){
+        if(guess > number){
+            printf("Lower...\n");
+             scanf("%d", &guess);
+             count++;
+        }else{
+            printf("Higher...\n");
+             scanf("%d", &guess);
+             count++;
+        }
+    }
+    printf("Congrats, the number is: %d\n You needed %d tries :)", number, count);
+}
+int
+main ()
+{
+    srand(time(0)); 
+ guessingGame();
+}
