@@ -1,0 +1,46 @@
+/******************************************************************************
+
+                            Online C Compiler.
+                Code, Compile, Run and Debug C program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
+#include <stdio.h>
+
+void doors(){
+    int doors[101] = {0};
+    int open[20] = {0};
+    int num = 0;
+    int pass=1;
+    
+    
+      for (pass; pass < 101; pass++) {
+       for (int i = 0; i < 101; i=i+pass) {
+       doors[i] = !doors[i];
+       }
+      }
+    
+    for (int i = 1; i < 101; i++) {
+       if(doors[i]==0){
+           printf("Door %d is closed.\n", i );
+       }else{
+           printf("Door %d is open.\n", i );
+           open[num]=i;
+           num++;
+       }
+    }
+    for (int i = 1; i < sizeof(open)/sizeof(int); i++) {
+        if(open[i] != 0){
+         printf("Open doors are %d\n", open[i]);
+        }
+    }
+   
+    
+}
+int
+main ()
+{
+doors();
+  return 0;
+}
