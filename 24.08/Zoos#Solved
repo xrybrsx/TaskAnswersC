@@ -1,0 +1,22 @@
+#include <stdio.h>
+int main(){
+	char word[10];
+	char x = 'z';
+	int countX = 0;
+	char y = 'o';
+	int countY = 0;
+    gets( word );
+	
+	for ( int i = 0; word[i] != '\0'; i++) {
+		if(word[i]==x){
+			countX++;
+		}if(word[i]==y){
+			countY++;
+		}
+	}
+	if (2*countX<=countY){
+		printf("Yes");
+	}else {
+		printf("No");
+	}
+}
