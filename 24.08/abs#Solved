@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+int
+abs (int number, int *p)
+{
+  if (number < 0)
+    {
+      number = number * -1;
+      printf ("%d", number);
+
+      *p = 1;
+
+    }
+  else
+    {
+
+     *p = 0;
+    }
+
+  return 0;
+}
+
+int
+main ()
+{
+  int p;
+  abs (5, &p);
+
+  printf ("%d", p);
+
+  return 0;
+}
