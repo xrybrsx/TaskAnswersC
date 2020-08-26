@@ -1,0 +1,23 @@
+#include <stdio.h>
+int main(){
+	int l,r,k;
+	scanf("%d %d %d", &l,&r,&k);
+	int count = 0;
+	int small;
+	int big;
+	if (l>r){
+		 small = r;
+		 big = l;
+	}else {
+		small = l;
+		big = r;
+	}
+	for( small; small<=big; small++){
+		if (small%k==0){
+			count++;
+		} 
+	}
+
+	printf("%d", count);
+	return count;
+	}
