@@ -1,0 +1,12 @@
+int func(int num){
+    int count = 0;
+    for (int i = num; i>0; i=i/10){
+        count++;
+    }
+    printf("%d", count);
+    return count;
+}
+int main(){
+    func(20000);
+    return 0;
+}
