@@ -1,0 +1,39 @@
+#include <stdio.h>
+
+int func(int* one, int* two, int* three, int* four, int* five){
+    
+    if (five > one && five < two){
+        int i = two - one;
+        
+        int j = four - three;
+        for(int i = 0; i != two - one -1 ; i++ ){
+            int* p = five+i;
+        *p = *three+i;
+        }
+    }else {
+        
+         for(int i = 0; i != four - three -1 ; i++ ){
+            int* p = five+i;
+        *p = *one+i;
+    }
+    }
+    return 0;
+    
+}
+int main(){
+    int arr1[] = {1,2,3,4,5,6};
+      int arr2[] = {7,8,9,10,11};
+      int* one = arr1;
+      int* two = arr1+4;
+      int* three = arr2;
+      int* four = arr2+4;
+      int* five = arr1+1;
+      func(one, two, three, four, five);
+      
+     for (int i = 0; i < 6; i++) {
+          printf("%d, ",arr1[i]);
+     }
+   
+
+    return 0;
+}
